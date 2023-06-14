@@ -28,4 +28,15 @@ class User {
         webSite: json["website"],
         company: Company.fromJson(json["company"]),
       );
+
+  Map toJson(User user) => {
+        "id": user.id,
+        "name": user.name,
+        "username": user.userName,
+        "email": user.email,
+        "phone": user.phone,
+        "website": user.webSite,
+        "address": user.address.toJson(user.address),
+        "company": user.company.toJson(user.company)
+      };
 }

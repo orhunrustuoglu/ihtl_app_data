@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ihtl_app_data/ui/screens/firebase_users_screen.dart';
 import 'package:ihtl_app_data/ui/screens/splash_screen.dart';
 import '/ui/providers/users_provider.dart';
 import '/ui/screens/main_screen.dart';
@@ -24,7 +25,9 @@ class MyApp extends StatelessWidget {
         ),
         routes: {
           "/": (context) => const SplashScreen(),
-          MainScreen.routeName: (context) => const MainScreen()
+          MainScreen.routeName: (context) => const MainScreen(),
+          FirebaseUsersScreen.routeName: (context) =>
+              const FirebaseUsersScreen()
         },
       ),
     );

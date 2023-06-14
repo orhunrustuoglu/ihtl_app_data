@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ihtl_app_data/ui/providers/users_provider.dart';
+import 'package:ihtl_app_data/ui/screens/firebase_users_screen.dart';
 import 'package:ihtl_app_data/ui/widgets/user_card.dart';
 import 'package:provider/provider.dart';
 
@@ -12,6 +13,12 @@ class MainScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Users"),
+        actions: [
+          IconButton(
+              onPressed: () => Navigator.of(context)
+                  .pushNamed(FirebaseUsersScreen.routeName),
+              icon: const Icon(Icons.open_in_new))
+        ],
       ),
       body: Consumer<UsersProvider>(
         builder: (context, usersProvider, _) {

@@ -12,4 +12,10 @@ class Company {
         catchPhrase: json["catchPhrase"],
         bs: json["bs"],
       );
+
+  Map toJson(Company company) => {
+        "name": company.name,
+        "catchPhrase": company.catchPhrase,
+        "bs": company.bs,
+      };
 }

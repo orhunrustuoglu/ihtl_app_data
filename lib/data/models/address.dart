@@ -19,4 +19,12 @@ class Address {
         zipcode: json["zipcode"],
         geo: Geo.fromJson(json["geo"]),
       );
+
+  Map toJson(Address address) => {
+        "street": address.street,
+        "suite": address.suite,
+        "city": address.city,
+        "zipcode": address.zipcode,
+        "geo": address.geo.toJson(address.geo),
+      };
 }

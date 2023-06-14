@@ -10,4 +10,9 @@ class Geo {
         lat: json["lat"],
         lng: json["lng"],
       );
+
+  Map toJson(Geo geo) => {
+        "lat": geo.lat,
+        "lng": geo.lng,
+      };
 }
